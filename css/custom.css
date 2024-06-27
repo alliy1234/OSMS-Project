@@ -1,0 +1,86 @@
+.navbar-brand_{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+    font-weight: bold; 
+}
+/* change nav color */
+.custom-nav .nav-item a{
+color: white;
+}
+.custom-nav .nav-item a:hover{
+    color: #f0aab1;
+    }
+
+
+    /* header image  */
+.back-image{
+    background-image: url(../images/bg\ img.jpg);
+background-size: cover;
+min-height: 90vh;
+background-position: center center ;
+background-repeat: no-repeat;
+margin-top: 2rem;
+}   
+.set{
+    padding-top:6rem;
+    padding-left: 2rem;
+} 
+.set p{
+font-style: italic;
+}
+/* media quer6y */
+
+@media only screen and (max-width:600px){
+    .set{
+        padding-top: 300px;
+        text-align: center;
+    }
+} 
+
+
+
+
+
+/* foo5ter bg */
+.fi-color {
+color: white;
+}
+.fi-color:hover{
+color: #e994a2;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: black;
+}
+.active{
+color: white;
+background-color:#dc3545 ;
+}
+a:hover{
+color: #f26571;
+color: white;
+}
+
+.edit a{
+    color: black;
+}
+
+.edit a:hover{
+    color: #f26571;
+}
+
+
+/* font-family: 'Ubuntu', sans-serif; */
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}

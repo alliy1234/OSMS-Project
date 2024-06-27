@@ -1,0 +1,39 @@
+
+if($_SESSION['is_login']){
+    $rEmail=$_SESSION['rEmail'];
+
+}else{
+    echo "<script> location.href='requesterlogin.php'  </script>";
+}
+
+$sql="select r_name,r_email from requesterlogin_tb  where r_email='$rEmail'";
+
+$res=$conn->query($sql);
+if($res->num_rows == 1){
+    $row=$res->fetch_assoc();
+    $rName=$row['r_name'];
+}
+
+
+
+
+if(isset($_REQUEST['nameupdate'])){
+    if($_REQUEST['rName']==""){
+        // echo "<script> alert('Enter your Name to Save it') </script>";
+        $passmsg=' <div class="alert alert-warning col-sm-6 me-5 mt-2" role="alert" >
+        Filled all fields </div>';
+    }else{
+$rName=$_REQUEST['rName'];
+$sql="update requesterlogin_tb set r_name ='$rName' where r_email='$rEmail'";
+if($conn->query($sql)){
+    echo "<script>  alert ('Your Name is Updated Successfully');    </script>";
+}else{
+    $passmsg=' <div class="alert alert-warning col-sm-6 me-5 mt-2" role="alert" >
+       An Error Occured.. Try Again </div>';
+}
+    }
+}
+ -->
+
+
+ <?php if(PAGE == 'requesterprofile') {echo 'active';}  ?> 
